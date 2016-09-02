@@ -60,8 +60,8 @@ if not is_released:
     version = full_version
 """
     # Adding the git rev number needs to be done inside
-    # write_version_py(), otherwise the import of traits_documenter._version messes
-    # up the build under Python 3.
+    # write_version_py(), otherwise the import of traits_documenter._version
+    # messes up the build under Python 3.
     fullversion = VERSION
     if os.path.exists('.git'):
         git_rev, dev_num = git_version()
@@ -110,13 +110,10 @@ if __name__ == "__main__":
         description='Autodoc extention for documenting traitlets',
         long_description=open('README.rst').read(),
         license="BSD",
-        install_requires=[l.strip()
-            for l in open('requirements.txt').readlines()],
+        install_requires=[
+            l.strip() for l in open('requirements.txt').readlines()],
         classifiers=[
-            "Programming Language :: Python :: 2.6",
             "Programming Language :: Python :: 2.7",
-            "Programming Language :: Python :: 3.2",
-            "Programming Language :: Python :: 3.3",
             "Programming Language :: Python :: 3.4",
             "Programming Language :: Python :: 3.5",
             "Development Status :: 5 - Production/Stable",

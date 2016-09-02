@@ -7,6 +7,7 @@ try:  # pragma: no cover
 except ImportError:  # pragma: no cover
     __version__ = "not-built"
 
+
 def setup(app):
     """ Add the TraitletDocumenter in the current sphinx autodoc instance.
 
