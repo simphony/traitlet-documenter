@@ -1,0 +1,24 @@
+language: python
+sudo: false
+python:
+  - "2.6"
+  - "2.7"
+  - "3.4"
+  - "3.5"
+env:
+  - SPHINX="sphinx==1.2.3"
+  - SPHINX="sphinx"
+matrix:
+ allow_failures:
+  - python: "3.5"
+before_install:
+  - pip install traitlets
+  - pip install $SPHINX
+  - pip install codecov
+  - pip install -r test-requirements.txt
+install:
+  - python setup.py develop
+script:
+  - coverage run -m tornado.testing discover
+after_success:
+  - codecov
