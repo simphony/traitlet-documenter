@@ -1,5 +1,9 @@
 __all__ = ['setup']
 
+try:  # pragma: no cover
+    from trait_documenter._version import full_version as __version__
+except ImportError:  # pragma: no cover
+    __version__ = "not-built"
 
 def setup(app):
     """ Add the TraitletDocumenter in the current sphinx autodoc instance.
