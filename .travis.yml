@@ -19,6 +19,7 @@ before_install:
 install:
   - python setup.py develop
 script:
+  - (flake8 . && python -m tornado.testing discover)
   - coverage run -m tornado.testing discover
 after_success:
   - codecov
