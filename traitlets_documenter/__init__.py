@@ -1,4 +1,6 @@
-__all__ = ['setup']
+from __future__ import absolute_import
+
+__all__ = ['__version__', 'setup']
 
 try:  # pragma: no cover
     from trait_documenter._version import full_version as __version__
