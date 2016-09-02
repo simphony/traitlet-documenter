@@ -97,7 +97,7 @@ if not is_released:
 
 if __name__ == "__main__":
     write_version_py()
-    from trait_documenter import __version__
+    from traitlets_documenter import __version__
 
     setup(
         name='traitlets_documenter',
