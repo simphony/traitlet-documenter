@@ -110,7 +110,8 @@ if __name__ == "__main__":
         description='Autodoc extention for documenting traitlets',
         long_description=open('README.rst').read(),
         license="BSD",
-        install_requires=['sphinx', 'astor', 'traitlets'],
+        install_requires=[l.strip()
+            for l in open('requirements.txt').readlines()],
         classifiers=[
             "Programming Language :: Python :: 2.6",
             "Programming Language :: Python :: 2.7",
