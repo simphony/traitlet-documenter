@@ -2,8 +2,8 @@ import unittest
 
 import mock
 
-from traitlets_documenter import setup
-from traitlets_documenter.class_traitlets_documenter import (
+from traitlet_documenter import setup
+from traitlet_documenter.class_traitlet_documenter import (
     ClassTraitletDocumenter)
 
 

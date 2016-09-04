@@ -6,16 +6,16 @@ the 7th Framework Programme (Project number 604005) under the call
 NMP.2013.1.4-1: "Development of an integrated multi-scale modelling environment
 for nanomaterials and systems by design".
 
-The package provides a sphinx autodoc extension for documenting Traitlets classes.
+The package provides a sphinx autodoc extension for documenting Traitlet classes.
 Currently support documenting classes with members of Traitlets TraitType.
-This code is inspired from `Traits Documenter <https://github.com/enthought/trait-documenter>`_
+This code is inspired from `Trait Documenter <https://github.com/enthought/trait-documenter>`_
 
 Usage
 -----
 
-Add `traitlets_documenter` to the extensions variables in your `conf.py`::
+Add `traitlet_documenter` to the extensions variables in your `conf.py`::
 
-  extensions.append('traitlets_documenter')
+  extensions.append('traitlet_documenter')
 
 License 
 -------

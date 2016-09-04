@@ -3,7 +3,7 @@ import unittest
 
 import mock
 
-from traitlets_documenter.class_traitlets_documenter import (
+from traitlet_documenter.class_traitlet_documenter import (
     ClassTraitletDocumenter)
 
 
