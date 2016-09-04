@@ -50,7 +50,7 @@ def git_version():
 
 def write_version_py(filename='traitlet_documenter/_version.py'):
     template = """\
-# THIS FILE IS GENERATED FROM TRAITLETS-DOCUMENTER SETUP.PY
+# THIS FILE IS GENERATED FROM TRAITLET-DOCUMENTER SETUP.PY
 version = '{version}'
 full_version = '{full_version}'
 git_revision = '{git_revision}'
