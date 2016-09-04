@@ -1,8 +1,8 @@
 from __future__ import unicode_literals
 import unittest
 
-from traitlets_documenter.tests import test_file, test_file2
-from traitlets_documenter.tests.test_file import Dummy, dummy_function
+from traitlets_documenter.tests import test_file
+from traitlets_documenter.tests.test_file import dummy_function
 from traitlets_documenter.util import get_trait_definition, DefinitionError
 
 
