@@ -4,7 +4,6 @@ import subprocess
 
 from setuptools import setup, find_packages
 
-
 MAJOR = 1
 MINOR = 0
 MICRO = 0
@@ -48,9 +47,9 @@ def git_version():
     return git_revision, git_count
 
 
-def write_version_py(filename='traitlets_documenter/_version.py'):
+def write_version_py(filename='traitlet_documenter/_version.py'):
     template = """\
-# THIS FILE IS GENERATED FROM TRAITLETS-DOCUMENTER SETUP.PY
+# THIS FILE IS GENERATED FROM TRAITLET-DOCUMENTER SETUP.PY
 version = '{version}'
 full_version = '{full_version}'
 git_revision = '{git_revision}'
@@ -65,15 +64,15 @@ if not is_released:
     fullversion = VERSION
     if os.path.exists('.git'):
         git_rev, dev_num = git_version()
-    elif os.path.exists('traitlets_documenter/_version.py'):
+    elif os.path.exists('traitlet_documenter/_version.py'):
         # must be a source distribution, use existing version file
         try:
-            from traitlets_documenter._version import git_revision as git_rev
-            from traitlets_documenter._version import full_version as full_v
+            from traitlet_documenter._version import git_revision as git_rev
+            from traitlet_documenter._version import full_version as full_v
         except ImportError:
             raise ImportError(
                 "Unable to import git_revision. Try removing "
-                "traitlets-documenter/_version.py and the build directory "
+                "traitlet-documenter/_version.py and the build directory "
                 "before building.")
 
         match = re.match(r'.*?\.dev(?P<dev_num>\d+)', full_v)
@@ -97,17 +96,17 @@ if not is_released:
 
 if __name__ == "__main__":
     write_version_py()
-    from traitlets_documenter import __version__
+    from traitlet_documenter import __version__
 
     setup(
-        name='traitlets_documenter',
+        name='traitlet_documenter',
         version=__version__,
         author='Enthought, Inc',
         author_email='info@enthought.com',
         maintainer='Enthought',
         maintainer_email='info@enthought.com',
-        url='https://github.com/simphony/traitlets-documenter',
-        description='Autodoc extention for documenting traitlets',
+        url='https://github.com/simphony/traitlet-documenter',
+        description='Autodoc extension for documenting traitlets',
         long_description=open('README.rst').read(),
         license="BSD",
         install_requires=[
@@ -124,6 +123,6 @@ if __name__ == "__main__":
             "Framework :: Sphinx :: Extension",
             "Topic :: Documentation :: Sphinx",
         ],
-        test_suite='traitlets_documenter.tests',
+        test_suite='traitlet_documenter.tests',
         packages=find_packages(),
         use_2to3=True)

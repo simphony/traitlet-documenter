@@ -1,9 +1,9 @@
 from __future__ import unicode_literals
 import unittest
 
-from traitlets_documenter.tests import test_file
-from traitlets_documenter.tests.test_file import dummy_function
-from traitlets_documenter.util import get_trait_definition, DefinitionError
+from traitlet_documenter.tests import test_file
+from traitlet_documenter.tests.test_file import dummy_function
+from traitlet_documenter.util import get_trait_definition, DefinitionError
 
 
 class TestGetTraitDefinition(unittest.TestCase):
